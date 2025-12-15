@@ -1,0 +1,23 @@
+artifact_path: file:///D:/reginakh/kuliah pnj/Semester 5!/asah by dicoding/PROYEK
+  AKHIR KELAS/Membangun sistem Machine Learning/SMSML_Nakendra Regina Khanza/mlruns/1/models/m-7a62950792804fcb81d3b37d9b3f74db/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+mlflow_version: 3.7.0
+model_id: m-7a62950792804fcb81d3b37d9b3f74db
+model_size_bytes: 2142989
+model_uuid: m-7a62950792804fcb81d3b37d9b3f74db
+prompts: null
+run_id: 2af50f28c4954d92af7f1fc3c12e5207
+utc_time_created: '2025-12-15 15:56:35.073078'

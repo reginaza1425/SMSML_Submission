@@ -1,0 +1,35 @@
+artifact_path: file:///D:/reginakh/kuliah pnj/Semester 5!/asah by dicoding/PROYEK
+  AKHIR KELAS/Membangun sistem Machine Learning/SMSML_Nakendra Regina Khanza/mlruns/0/models/m-99727546f25749ff9ca3afc6d1a2a7fa/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.13
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.1
+is_signature_from_type_hint: false
+mlflow_version: 3.7.0
+model_id: m-99727546f25749ff9ca3afc6d1a2a7fa
+model_size_bytes: 2142887
+model_uuid: m-99727546f25749ff9ca3afc6d1a2a7fa
+prompts: null
+run_id: be2ccf82ab424a6fa002a71c96d9433b
+signature:
+  inputs: '[{"type": "long", "name": "PassengerId", "required": true}, {"type": "long",
+    "name": "Pclass", "required": true}, {"type": "long", "name": "Sex", "required":
+    true}, {"type": "double", "name": "Age", "required": true}, {"type": "long", "name":
+    "SibSp", "required": true}, {"type": "long", "name": "Parch", "required": true},
+    {"type": "double", "name": "Fare", "required": true}, {"type": "boolean", "name":
+    "Embarked_Q", "required": true}, {"type": "boolean", "name": "Embarked_S", "required":
+    true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-12-15 15:34:35.472643'
