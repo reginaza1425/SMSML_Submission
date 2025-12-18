@@ -14,7 +14,7 @@ def train_with_tuning():
 
     # 1. Load data dari automate (SATU PINTU)
     X_train, X_test, y_train, y_test = load_and_preprocess_data(
-        "Titanic-Dataset.csv"
+        "Titanic-raw.csv"
     )
 
     # 2. Set experiment MLflow

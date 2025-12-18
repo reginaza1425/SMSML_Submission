@@ -1,0 +1,50 @@
+WORKFLOW CONTINUOUS INTEGRATION (CI)
+
+Workflow CI pada proyek ini bertujuan untuk memastikan bahwa setiap perubahan
+kode pada proses preprocessing, training, dan evaluasi model dapat berjalan
+dengan baik dan konsisten.
+
+Alur workflow CI yang diterapkan adalah sebagai berikut:
+
+1. Persiapan Environment
+   - Menggunakan Python 3.x
+   - Install seluruh dependency melalui file requirements.txt
+   - Environment dijalankan secara lokal / Google Colab
+
+2. Data Preparation
+   - Dataset di-load menggunakan script preprocessing otomatis
+   - Proses preprocessing mencakup:
+     - Handling missing values
+     - Encoding data kategorikal
+     - Scaling fitur numerik
+   - Output preprocessing digunakan sebagai satu pintu data untuk modeling
+
+3. Model Training
+   - Script modelling.py dijalankan
+   - Model dilatih menggunakan data hasil preprocessing otomatis
+   - Parameter dan metrik evaluasi dicatat menggunakan MLflow
+
+4. Model Evaluation
+   - Evaluasi dilakukan menggunakan data test
+   - Metrik yang digunakan:
+     - Accuracy
+     - Precision
+     - Recall
+     - F1-Score
+   - Hasil evaluasi ditampilkan di terminal dan dicatat ke MLflow
+
+5. Model Tuning (Opsional / Skilled)
+   - Script modelling_tuning.py dijalankan
+   - Proses tuning dilakukan menggunakan GridSearch atau RandomSearch
+   - Model terbaik dipilih berdasarkan metrik evaluasi
+
+6. Penyimpanan Artefak
+   - Model terbaik disimpan sebagai artefak MLflow
+   - Artefak model siap digunakan untuk proses inference
+
+7. Validasi Workflow
+   - Jika terjadi error pada preprocessing atau training, proses dihentikan
+   - Jika proses berjalan sukses, model dinyatakan siap untuk deployment
+
+Workflow ini memastikan bahwa setiap perubahan pada data atau kode
+tidak merusak alur training model dan hasil eksperimen dapat direproduksi.
