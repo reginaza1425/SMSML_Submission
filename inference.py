@@ -4,7 +4,7 @@ from prometheus_client import start_http_server, Counter, Histogram
 import joblib
 
 # ==========================
-# Load Model
+# Load model
 # ==========================
 model = joblib.load("model_fraud_detection/model.pkl")
 
